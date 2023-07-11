@@ -25,7 +25,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 class BTKbDevice():
     # change these constants
-    MY_ADDRESS = "B8:27:EB:C5:B3:27"
+    MY_ADDRESS = "EC:00:FE:01:B9:9E"
     MY_DEV_NAME = "Ewin BT5.1 Keyboard"
 
     # define some constants
@@ -46,7 +46,7 @@ class BTKbDevice():
         print("3. Configuring Device name " + BTKbDevice.MY_DEV_NAME)
         # set the device class to a keybord and set the name
         os.system("hciconfig hci0 up")
-        os.system("hciconfig hci0 name " + BTKbDevice.MY_DEV_NAME)
+        os.system("hciconfig hci0 name + '{BTKbDevice.MY_DEV_NAME}'")
         # make the device discoverable
         os.system("hciconfig hci0 piscan")
 
